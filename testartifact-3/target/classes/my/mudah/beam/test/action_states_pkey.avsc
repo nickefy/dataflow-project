@@ -1,0 +1,10 @@
+{
+	"type":"record",
+	"name":"action_states_pkey",
+	"namespace":"com.dattran.bottledwater.dbschema.public",
+	"fields":[
+		{"name":"ad_id","type":["null","int"]},
+		{"name":"action_id","type":["null","int"]},
+		{"name":"state_id","type":["null","int"]}
+	]
+}
