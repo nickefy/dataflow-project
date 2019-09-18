@@ -59,12 +59,12 @@ public class Readkafka {
         
         PTransform<PBegin, PCollection<KV<action_states_pkey, String>>> kafka =
                 KafkaIO.<action_states_pkey, String>read()
-                    .withBootstrapServers("10.0.0.222:9092")
-                    .withTopic("m56.ad_actions")
+                    .withBootstrapServers("bootstrapserver")
+                    .withTopic("topic")
 //                    .withKeyDeserializer(io.confluent.kafka.serializers.KafkaAvroDeserializer.class)
                     .withKeyDeserializerAndCoder((Class)KafkaAvroDeserializer.class, AvroCoder.of(action_states_pkey.class))
                     .withValueDeserializer(StringDeserializer.class)
-                    .updateConsumerProperties(ImmutableMap.of("schema.registry.url", (Object)"http://10.0.0.35:32100"))
+                    .updateConsumerProperties(ImmutableMap.of("schema.registry.url", (Object)"schemaregistry"))
                     .updateConsumerProperties(ImmutableMap.of("specific.avro.reader", (Object)"true"))
                     .withMaxNumRecords(5)
                     .withoutMetadata();
