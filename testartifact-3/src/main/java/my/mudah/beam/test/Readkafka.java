@@ -12,7 +12,7 @@ import io.confluent.kafka.serializers.KafkaAvroDeserializer;
 import java.io.File;
 import java.io.IOException;
 
-import my.mudah.beam.test.action_states_pkey;
+import my.mudah.beam.test.avro.action_states_pkey;
 import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericRecord;
 import org.apache.beam.sdk.Pipeline;
