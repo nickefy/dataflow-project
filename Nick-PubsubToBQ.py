@@ -15,8 +15,6 @@ from apache_beam.io.gcp.pubsub import PubsubMessage
 
 # 2020-03-08 Added Global Window and Allow late data
 
-# 2020-03-09 beam.io.gcp.bigquery.WriteToBigquery for kafka-action-states-1
-# 2020-03-09 beam.io.gcp.bigquery._StreanToBigquery for kafka-action-states-2
 
 # 2020-03-09 Windowed Pcollection into Fixed windows and Allowed_lateness
 
